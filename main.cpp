@@ -6,9 +6,9 @@ using namespace std;
 int ExeptionAge()
 {
     int age;
-    cout << "Invalid age" << endl;
     do
     {
+        cout << "Invalid age" << endl;
         cout << "Enter age: "; cin >> age;
     } while (age <= 10 || age > 80);
     return age;
