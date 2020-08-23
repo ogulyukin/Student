@@ -10,10 +10,10 @@ compile_commands.json
 CTestTestfile.cmake
 _deps
 
-cmake-build-debug/
-
 ### CLion
 .idea/
+cmake-build-debug/
 
 ### VS 2019
 .vs/
+out/
