@@ -20,10 +20,17 @@ public:
     string group; //Группа
     int stage; //Курс
     bool study; //Учится?
+    int scores[5];  // кол-во оценок
     void SetAge(int age); //Установка занчения возраста
     int GetAge(); //Получение значения возраста
+    double GetAverageBall(); // Получение значение среднего балла
+
+
 private:
+    double averageBall; // Средний балл
     int age; //Возраст
+    void CalculateAverageBall(); // Расчет среднего балла
+
 };
 
 void Student::SetAge(int age)
@@ -38,4 +45,18 @@ void Student::SetAge(int age)
 int Student::GetAge()
 {
     return age;
+}
+
+void Student::CalculateAverageBall()
+{
+    int sum = 0;
+    for (int i = 0; i < 5; ++i) {
+        sum += scores[i];
+    }
+    averageBall = sum/5;
+}
+
+double Student::GetAverageBall()
+{
+    return averageBall;
 }
