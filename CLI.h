@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -27,4 +28,13 @@ void PrintMenu()
     cout << "5. Clear all list" << endl;
     cout << "0. Exit" << endl;
     cout << "+++++++++++++++++++++++++++" << endl;
+}
+
+void PrintError(string message)
+{
+    cout << "!!!!!!!!!!!!!!!!!!!!!" << endl;
+    cout << "! ! ! E R R O R ! ! !" << endl;
+    cout << "!!! " << message << " !!!" << endl;
+    cout << "!!!!!!!!!!!!!!!!!!!!!" << endl;
+    cout << endl;
 }

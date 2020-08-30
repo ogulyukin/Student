@@ -40,7 +40,7 @@ int main()
                 cout << "Good byе!" << endl;
                 break;
             default:
-                cout << "Invalid menu item" << endl;
+                PrintError("Invalid menu item");
                 break;
         }
     } while (symbol != '0');
