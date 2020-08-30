@@ -38,3 +38,12 @@ void PrintError(string message)
     cout << "!!!!!!!!!!!!!!!!!!!!!" << endl;
     cout << endl;
 }
+
+void PrintExit()
+{
+    cout << endl;
+    cout << "-----------------" << endl;
+    cout << "--- Good byе! ---" << endl;
+    cout << "-----------------" << endl;
+    cout << endl;
+}
