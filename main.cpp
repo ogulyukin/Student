@@ -1,5 +1,6 @@
 #include <iostream>
 #include "ClassStudent.h"
+#include "CLI.h"
 
 using namespace std;
 
@@ -16,21 +17,34 @@ int ExeptionAge()
 
 int main()
 {
-    Student student;
+    PrintWelcome();
 
-    int age;
-    try
-    {
-        cout << "Enter age: "; cin >> age;
-        student.SetAge(age);
-    }
-    catch (int e)
-    {
-        if (e == -1)
+    char symbol;
+    do {
+        PrintMenu();
+        cout << "Enter menu item - "; cin >> symbol;
+
+        switch (symbol)
         {
-            student.SetAge(ExeptionAge());
+            case '1':
+                break;
+            case '2':
+                break;
+            case '3':
+                break;
+            case '4':
+                break;
+            case '5':
+                break;
+            case '0':
+                cout << "Good byе!" << endl;
+                break;
+            default:
+                cout << "Invalid menu item" << endl;
+                break;
         }
-    }
-    cout << student.GetAge() << endl;
+    } while (symbol != '0');
+
+    system("pause");
 }
 
