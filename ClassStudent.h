@@ -49,7 +49,7 @@ double Student::GetAverageGrade() {
 void Student::SetAverageGrade() {
     int sum = 0;
     for (int x = 0; x < 5; x++){
-        sum += averageGrade[x];
+        sum += grades[x];
     }
     averageGrade = sum / 5;
 }
