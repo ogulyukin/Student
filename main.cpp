@@ -32,6 +32,7 @@ int main()
             case '1':
                 break;
             case '2':
+                AddStudent(students, SIZE);
                 break;
             case '3':
                 break;
