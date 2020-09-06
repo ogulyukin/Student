@@ -26,6 +26,7 @@ void PrintMenu()
     cout << "3. Change student details" << endl;
     cout << "4. Remove student from list" << endl;
     cout << "5. Clear all list" << endl;
+    cout << "6. Export to file" << endl;
     cout << "0. Exit" << endl;
     cout << "+++++++++++++++++++++++++++" << endl;
 }

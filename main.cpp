@@ -1,6 +1,7 @@
 #include <iostream>
 #include "ClassStudent.h"
 #include "CLI.h"
+#include "ExportToFile.h"
 
 using namespace std;
 
@@ -17,6 +18,8 @@ int ExeptionAge()
 
 int main()
 {
+    const int SIZE = 3;
+    Student students[SIZE];
     PrintWelcome();
 
     char symbol;
@@ -35,6 +38,9 @@ int main()
             case '4':
                 break;
             case '5':
+                break;
+            case '6':
+                Export(students, SIZE);
                 break;
             case '0':
                 PrintExit();
