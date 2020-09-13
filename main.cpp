@@ -2,6 +2,7 @@
 #include "ClassStudent.h"
 #include "CLI.h"
 #include "ExportToFile.h"
+#include "ImportFromFile.h"
 
 using namespace std;
 
