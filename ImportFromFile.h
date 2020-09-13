@@ -45,11 +45,13 @@ int GetSize(string temp){
     while (pos02 != -1) {
         pos02 = GetNextPos(temp, pos01, '\n');
         pos01 = pos02 + 1;
-        count++;
+        if (pos02 != -1)
+            count++;
     }
 
     return count;
 }
+//todo доделать здесь
 int Import(Student students[],int size){
     string temp;
     int pos01 = 0;
