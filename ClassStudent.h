@@ -24,6 +24,7 @@ public:
     void SetAge(int age); //Установка занчения возраста
     int GetAge(); //Получение значения возраста
     double GetAverageGrade(); //Получить среднюю оценку
+    void ShowStudent();
 private:
     double averageGrade; //Средеяя оценка
     int age; //Возраст
@@ -52,4 +53,14 @@ void Student::SetAverageGrade() {
         sum += grades[x];
     }
     averageGrade = sum / 5;
+}
+void Student::ShowStudent(){
+    cout << "Фамилия       : " << lastName << endl;
+    cout << "Имя           : " << firstName << endl; //Имя
+    cout << "Дата рождения : " << dateBirth.day << "." << dateBirth.month << "." << dateBirth.year << endl; //Дата рождения
+    cout << "Факультет     : " << faculty << endl; //Факультет
+    cout << "Группа        : " << group << endl; //Группа
+    cout << "Курс          : " << stage << endl; //Курс
+    cout << "Статус        : " << ((!study) ? "не учится":"учится") << endl; //Учится?
+    cout << "Возраст       : " << GetAge() << endl; //Оценки
 }

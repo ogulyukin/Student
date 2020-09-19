@@ -3,6 +3,7 @@
 #include "CLI.h"
 #include "ExportToFile.h"
 #include "ImportFromFile.h"
+#include <vector>
 
 using namespace std;
 
@@ -20,7 +21,14 @@ int ExeptionAge()
 int main()
 {
     const int SIZE = 3;
-    Student students[SIZE];
+    int size = 0;
+    string forFile;
+    //Student students[3];
+    forFile = ImportFromFile("student.csv");
+    size = GetSize(forFile);
+    cout << endl << size << endl;
+    Student *students = new Student[size];
+    Import(students, size);
     PrintWelcome();
 
     char symbol;
@@ -31,6 +39,10 @@ int main()
         switch (symbol)
         {
             case '1':
+                for (int x = 0; x < size; x++){
+                    cout << "*********************" << endl;
+                    students[x].ShowStudent();
+                }
                 break;
             case '2':
                 AddStudent(students, SIZE);
@@ -52,6 +64,7 @@ int main()
                 break;
         }
     } while (symbol != '0');
+    delete [] students;
 
     system("pause");
 }

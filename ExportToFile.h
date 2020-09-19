@@ -29,5 +29,6 @@ void Export(Student students[], const int size){
         temp += to_string(students[x].stage) + ";";
         temp += to_string(students[x].study) + "\n";
     }
+    temp +="EndOfFile:" + size;
     ExportToFile("student.csv", temp);
 }
